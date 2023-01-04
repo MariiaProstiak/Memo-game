@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./img/favicon/site.webmanifest">
+    <title>MemoryGame</title>
+</head>
+
+<body>
+    <header>
+        <h3>Score: <span id="result">0</span></h3>
+        <h3>Moves: <span id="moves">0</span></h3>
+        <h3>Rounds played: <span id="rounds">0</span></h3>
+        <h3>Accuracy: <span id="accuracy">100</span>%</h3>
+    </header>
+
+
+
+    <div id="grid" class="grid-wrapper"></div>
+    <div class="center" id="centerBlock">
+        <div><label for="imageSet">Choose your image set:</label>
+
+            <select id="imageSet" name="imageSet" class="select">
+                <option value="">--Please choose an option--</option>
+                <option value="fastfood">Fast food</option>
+                <option value="newyear">New Year</option>
+            </select>
+        </div>
+
+
+        <div class="input">
+            <label for="nbImages">Enter number of images:</label>
+            <input type="number" id="nbImages" value="3" min="3" max="6" />
+        </div>
+
+        <button id="startButton" class="button">Start the game</button>
+    </div>
+
+
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Congratulations, you found them all!</h2>
+            </div>
+            <div id="modalBody" class="modal-body">
+            </div>
+        </div>
+        <canvas id="canvas"></canvas>
+
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
