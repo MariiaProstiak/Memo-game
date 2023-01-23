@@ -81,8 +81,15 @@ span.onclick = function () {
   modal.style.display = "none";
 };
 startButton.onclick = function () {
+  for (let i = 3; i < 7; i++) {
+    gridDisplay.classList.remove("_" + i);
+  }
+
   const imageSet = document.getElementById("imageSet").value;
   const nbImages = document.getElementById("nbImages").value;
+
+  gridDisplay.classList.add("_" + nbImages);
+
   let arr = imageSet === "fastfood" ? fastFoodImgArray : newYearImgArray;
   centerBlock.style.display = "none";
   clearBord();
